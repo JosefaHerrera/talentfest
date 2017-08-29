@@ -12630,6 +12630,30 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
+$(document).ready(function() {
+
+   $.ajax({
+           url: 'http://dev.skynouk.com/talent/api/getEvents',
+           type: 'GET',
+           datatype: 'JSON',
+       })
+       .done(function(response) {
+            var uniqueNames = [];
+            $.each(response.data.events, function(i, el){
+                if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+            });
+
+              for(var i = 0; i < uniqueNames.length; i++){
+                $("#sel1").append("<option value='" + category_name[i] + "'>" +category_name[i] + "</option>");
+              }
+       })
+       .fail(function() {
+           console.log('error')
+       })
+       .always(function() {
+           console.log('complete')
+       });
+})
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '516663718664783',

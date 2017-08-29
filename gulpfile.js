@@ -32,7 +32,7 @@ gulp.task('watch', function() {
 
 //servidor WEB localhost puerto 8000
 gulp.task('webserver', function(){
-    gulp.src('../photolab/')
+    gulp.src('../talentfest/')
         .pipe(webserver({
         fallback: 'index.html',
         livereload: true,

@@ -101,7 +101,6 @@ $(document).ready(function() {
                                     '</div>');
                                 })
                             }
-
                            })
                          .fail(function(response) {
                              console.log('error')

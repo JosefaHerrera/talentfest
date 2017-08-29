@@ -9,8 +9,6 @@
   font-size: 24px;
   line-height: 1.33;
   border-radius: 35px;
-
-
 }
 
 .fa-bars{
@@ -25,7 +23,7 @@
     z-index: 1; 
     top: 0;
     left: 0;
-    background-color: rgba(20, 80, 80, 0.3); 
+    background-color: $Greenwater; 
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -49,15 +47,11 @@
 	}
 }
 
+
 #profile-options a{
 	margin-left: 30px;
 }
 
-
-
-	
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sideNav {padding-top: 15px;}
     .sideNav a {font-size: 18px;}

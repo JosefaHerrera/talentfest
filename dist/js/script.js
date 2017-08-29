@@ -12638,15 +12638,21 @@ $(document).ready(function() {
            datatype: 'JSON',
        })
        .done(function(response) {
-            var uniqueNames = [];
-            $.each(response.data.events, function(i, el){
-                if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
-            });
+           var categories = [];
+                         var uniqueNames = [];
+
+           response.data.events.forEach(function(el){          
+              categories.push(el.category_name);
+              console.log(categories);    
+            })
+            $.each(categories, function(i, el){
+               if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+              });
 
               for(var i = 0; i < uniqueNames.length; i++){
-                $("#sel1").append("<option value='" + category_name[i] + "'>" +category_name[i] + "</option>");
+                $("#sel1").append("<option value='" + uniqueNames[i] + "'>" + uniqueNames[i] + "</option>");
               }
-       })
+         })
        .fail(function() {
            console.log('error')
        })
@@ -12654,7 +12660,7 @@ $(document).ready(function() {
            console.log('complete')
        });
 })
-  window.fbAsyncInit = function() {
+ /* window.fbAsyncInit = function() {
     FB.init({
       appId      : '516663718664783',
       cookie     : true,
@@ -12680,4 +12686,4 @@ function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
-}
+}*/

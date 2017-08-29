@@ -6,12 +6,21 @@ $(document).ready(function() {
            datatype: 'JSON',
        })
        .done(function(response) {
-           console.log(response.data.events[0].category_name);
-           response.data.events.forEach(function(el){            
-              console.log(el.category_name);
-             $('#sel1').append('<option value="'+ el.category_name +'">'+ el.category_name +'</option>');
-           })
-       })
+           var categories = [];
+                         var uniqueNames = [];
+
+           response.data.events.forEach(function(el){          
+              categories.push(el.category_name);
+              console.log(categories);    
+            })
+            $.each(categories, function(i, el){
+               if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+              });
+
+              for(var i = 0; i < uniqueNames.length; i++){
+                $("#sel1").append("<option value='" + uniqueNames[i] + "'>" + uniqueNames[i] + "</option>");
+              }
+         })
        .fail(function() {
            console.log('error')
        })

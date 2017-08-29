@@ -12641,10 +12641,10 @@ $(document).ready(function() {
   
            response.data.events.forEach(function(el){          
              $(".events").append(
-                '<div class="card card-inverse card-primary mb-3">'+
+                '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
                   '<div class="card-block">'+
                   '<blockquote class="card-blockquote">'+
-                  '<div class="row ' + el.category_id + '">' +
+                  '<div class="row">' +
                   '<div class="col-sm-8 col-xs-8">' +
                   '<h3>' + el.title + '</h3>' +
                   '<div class="col-sm-4 col-xs-4">' +
@@ -12691,6 +12691,7 @@ $(document).ready(function() {
                     //console.log($(this).val());
               var currentValue = $(this).val();
                     // desaparecer todos los que no son de esta categoria
+                     $(".events").empty();
                     if (currentValue === e.id ) {
                          $.ajax({
                              url: 'http://dev.skynouk.com/talent/api/getEventsByCategories',
@@ -12699,23 +12700,48 @@ $(document).ready(function() {
                              data    : {'category_id' : e.id},
                          })
                          .done(function(response) {
-                            console.log(response);
+                          console.log(response);
+                            response.data.events.forEach(function(el){          
+                                 $(".events").append(
+                                    '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
+                                      '<div class="card-block">'+
+                                      '<blockquote class="card-blockquote">'+
+                                      '<div class="row">' +
+                                      '<div class="col-sm-8 col-xs-8">' +
+                                      '<h3>' + el.title + '</h3>' +
+                                      '<div class="col-sm-4 col-xs-4">' +
+                                      '<p class="text-muted">'+ el.category_name +'</p>' +
+                                      '<p>' + el.date + '</p>' +
+                                      '</div>' +
+                                      '<div class="col-sm-4 col-xs-4">' +
+                                      '<button type="button" class="btn btn-info">Quiero ir</button>' +
+                                      '<button type="button" class="btn btn-default">Leer Más</button>' +
+                                      '</div>' +
+                                      '</div>' +
+                                      '<div class="col-sm-12 col-xs-12 text-center">' +
+                                      '<p>evaluación</p>' +
+                                      '</div>' +
+                                      '</div>'+
+                                      '</blockquote>'+
+                                      '</div>'+
+                                    '</div>');
+                                })
                            })
                          .fail(function(response) {
-                             $(".events").empty();
+                             /*$(".events").empty();
                              var eventsCategory = response.data.events
                              if (eventsCategory.length == 0) {
                               $(".events").append(
                                                               "<div>ups!</div>"+
                                                               "<div> Lo sentimos no hay eventos en esta categoría");
-                             }
+                             }*/
                          })
                          .always(function() {
                              console.log('complete')
                          });
 
                     } else {
-                        $('.' + e.id).hide();
+                        $('.' + e.id).remove();
                     }
               });
            })

@@ -13,17 +13,21 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<span class="text-left " onclick="openNav()">
-						<i class="fa fa-bars fa-3x burger-menu"></i> 
+						<i class="fa fa-bars fa-3x"></i> 
 					</span>
 				</div>
 			</div>
 			<div id="menu" class="sideNav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="#">Home</a>
-				<a href="#">Mi Perfil</a>
-						<!-- Coming soon
-						<a href="#">Sobre nosotros</a>
-						<a href="#">Contactanos</a> -->
+				<a href="#" data-toggle="collapse" data-target="#profile-options">Mi Perfil</a>
+				<div id="profile-options" class="collapse">
+					<a href="#">Mis eventos</a>
+					<a href="#">Medidor de Felicidad</a>
+				</div>
+				<a href="#">Sobre nosotros</a>
+				<a href="#">Contactanos</a>
+				
 			</div>
 			<div id="home">
 				<div class="container">
@@ -36,9 +40,9 @@
 
 
 
-			<!--ICONOS-->
-			<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
-			<!--JS-->
-			<script src="dist/js/script.js"></script>
-		</body>
-		</html>
+	<!--ICONOS-->
+	<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
+	<!--JS-->
+	<script src="dist/js/script.js"></script>
+</body>
+</html>

@@ -13,6 +13,11 @@
 
 }
 
+.fa-bars{
+	margin-top: 15px;
+	color: $Navyblue;
+}
+
 .sideNav {
     height: 100%; 
     width: 0; 
@@ -21,39 +26,36 @@
     top: 0;
     left: 0;
     background-color: rgba(20, 80, 80, 0.3); 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #818181;
+	    display: block;
+	    transition: 0.3s
+   		a:hover, .offcanvas a:focus{
+ 	    	color: #f1f1f1;
+		}
+	}
+	.closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	}
 }
 
-.fa-bars{
-	margin-top: 15px;
-	color: $Navyblue;
-}
-/* The navigation menu links */
-.sideNav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
+#profile-options a{
+	margin-left: 30px;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sideNav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
 
-/* Position and style the close button (top right corner) */
-.sideNav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
 
+	
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

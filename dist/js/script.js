@@ -12631,7 +12631,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 $(document).ready(function() {
-    var facebookId = 1234568;
+    var facebookId = 478648959181573;
     var faceArray = [];
 /*  window.fbAsyncInit = function() {
     FB.init({
@@ -12919,6 +12919,16 @@ $(document).ready(function() {
                   .fail(function(res){
                     console.log("error")
                   })
+
+                  $("#avatar").append(
+                      '<div id="imgfb" class="col-md-6 col-sm-6 col-xs-12 text-center">'+
+          '<img src="https://graph.facebook.com/' +facebook_id + '/picture?type=large" class="img-circle" alt="Profile">' +
+        '</div>' +
+        '<div id="avatar-name" class="col-md-6 col-sm-6 col-xs-12 text-center">' +
+          '<h1>'+last_name+'</h1>'+
+        '</div>'
+                    );
+
 })
 
 

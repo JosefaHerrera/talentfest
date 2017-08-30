@@ -7,6 +7,36 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
+		<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId            : '1650641148293432',
+				autoLogAppEvents : true,
+				xfbml            : true,
+				version          : 'v2.10'
+			});
+			FB.AppEvents.logPageView();
+		};
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		function statusChangeCallback(response){
+			FB.api('/me', {fields: 'last_name'}, function(response) {
+				console.log(response.id);
+				facebookId = response.id;
+				console.log(response);
+			});
+		}
+		function checkLoginState() {
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+			});
+		}
+	</script>
 </head>
 <body class="light-theme body">
 	<header>	
@@ -18,7 +48,16 @@
 							<i class="fa fa-bars fa-3x"></i> 
 						</span>
 					</div>
-					<div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4 text-right" id="btnGroup">
+
+					<div class="col-sm-4 col-xs-4 text-center" id="facebook">
+						<!-- boton face -->
+						<fb:login-button id="loginface" scope="public_profile,email"
+						onlogin="checkLoginState();"></fb:login-button>
+						<p>Inicia sesión.</p>
+						<!-- codigo facebook -->
+					</div>
+
+					<div class="col-sm-4 col-xs-4 text-right" id="btnGroup">
 						<button id="color" class="btn btn-x-lgh"></button>
 						<button id="color" class="btn btn-x-drk"></button>
 					</div>
@@ -31,7 +70,8 @@
 			<a href="index.html">Home</a>
 			<a href="profile.html">Mi Perfil</a>
 			<a href="about.html">Sobre nosotros</a>
-			<a href="#">Contactanos</a>	
+			<a href="xperiences.html">Experiencias</a>
+			<a href="about.html">Preguntas Frecuentes</a>	
 			<footer class="footer">
 				<div class="container">
 					<span><img src="dist/img/logo-web-qwoka-03.png" class="navbar-brand text-right" alt="brand"></span>

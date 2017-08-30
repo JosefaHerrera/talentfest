@@ -25,7 +25,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
   function statusChangeCallback(response){
-  	FB.api('/me', {fields: 'last_name'}, function(response) {
+  	FB.api('/me', {fields:'last_name'}, function(response) {
   console.log(response.id);
   facebookId = response.id;
   console.log(response);

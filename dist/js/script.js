@@ -12890,7 +12890,7 @@ $(document).ready(function() {
                   '<div class="col-sm-12 col-xs-12 text-center">' +
                   '<div class="rate">'+
   '<div class="emoji">😑</div>' +
-  '<input class="carita" type="range" min="0" max="4" step="1">'+
+  '<input class="carita" type="range" min="0" max="4" step="1" >'+
 '</div>' +
                   '</div>' +
               '</div>'+
@@ -12917,14 +12917,13 @@ $(document).ready(function() {
                                       '</div>' +
                                     '</div>'
                                     );
-                    })
-                    var emojis = ['😠','😦','😑','😀','😍'];
+                       var emojis = ['😠','😦','😑','😀','😍'];
 
                     $(".carita").mousemove(function(){
                       var i = $(this).val();
                       $(".emoji").html(emojis[i]);
                     });
-
+                    })
                   })
                   .fail(function(res){
                     console.log("error")

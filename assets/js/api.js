@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var facebookId = 478648959181573;
+    var facebookId;
     var faceArray = [];
 /*  window.fbAsyncInit = function() {
     FB.init({

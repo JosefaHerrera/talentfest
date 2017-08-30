@@ -60,12 +60,45 @@
 
 
 #sel1{
-	width:80%;
+	width:100%;
 }
 
-#infomodal{
+#modal-dialog{
 	background-color: #fff; 
 }
 a{
 	display: block;
+	text-decoration:none;
+	color:$Greenwater;
 }
+
+#facebook{
+	margin-top:-10%;
+}
+
+label{
+	color:$orange;
+}
+#sel1{
+	color:$orange;
+}
+
+#text1{
+	color:$Navyblue;
+}
+.card-block{
+	border-right: 5px solid $Greenwater;	
+	border-left: 5px solid $Greenwater;
+	h3{
+		color:$orange;
+	}
+	h5{
+		color:$Navyblue;
+	}
+}
+.btn-info{
+	background-color:$Greenwater;
+	color:#fff;
+}
+
+

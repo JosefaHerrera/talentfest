@@ -69,23 +69,19 @@
 <section class="start">
 	<div class="container">
 		<div class="row">
-			
-			<div class="col-sm-12 col-xs-12 text-center">
+			<div class="col-sm-12 col-xs-12 text-center" id="facebook">
 				<!-- boton face -->
-				<fb:login-button 
-				scope="public_profile,email"
-				onlogin="checkLoginState();">
-			</fb:login-button>
-			<p>Por favor, inicia sesión aquí.</p>
+				<fb:login-button id="loginface" scope="public_profile,email"
+				onlogin="checkLoginState();"></fb:login-button>
+			<p>Inicia sesión.</p>
 			<!-- codigo facebook -->
+			</div>
 		</div>
-	</div>
 
 	<div class="row">
 		<div class="col-sm-12 col-xs-12 text-center">
-			<h3>Bienvenidos a</h3>
-			<h1>Qwoka</h1>
-			<p>Es un sistema inteligente que te propone experiencias para compartir con quienes más te importan, para que te sientas más feliz.</p>
+			<img src="dist/img/logo-web-qwoka-02.png" alt="" class="img-responsive">
+			<p id="text1">Es un sistema inteligente que te propone experiencias para compartir con quienes más te importan, para que te sientas más feliz.</p>
 		</div>
 	</div>
 </div>
@@ -104,10 +100,13 @@
 
 			</div>
 		</div>
-
-
-		<div class="events">
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 text-center">
+		<div class="events"></div>
 		</div>
+	</div>
+
+</div>
 	</section>
 	<div class="modal-items">
 		  

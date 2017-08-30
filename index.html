@@ -17,106 +17,101 @@
 						<i class="fa fa-bars fa-3x"></i> 
 					</span>
 				</div>
-			</div>
-			<div id="menu" class="sideNav">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-				<a href="index.html">Home</a>
-				<a href="profile.html">Mi Perfil</a>
-
-				<a href="#">Sobre nosotros</a>
-				<a href="#">Contactanos</a>
-				
-			</div>
-			
-		</div>
-	</div>
-</header>
-
-<!-- escribe tu codigo aquí-->
-<section class="start">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-sm-12 col-xs-12 text-center">
-				<!-- boton face -->
-				<fb:login-button 
-				scope="public_profile,email"
-				onlogin="checkLoginState();">
-			</fb:login-button>
-			<p>Por favor, inicia sesión aquí.</p>
-			<!-- codigo facebook -->
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-sm-12 col-xs-12 text-center">
-			<h3>Bienvenidos a</h3>
-			<h1>Qwoka</h1>
-			<p>Es un sistema inteligente que te propone experiencias para compartir con quienes más te importan, para que te sientas más feliz.</p>
-		</div>
-	</div>
-</div>
-</section>
-
-<section class="categories">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-xs-12 text-center">
-				<div class="form-group">
-					<label for="sel1">Categorias</label>
-					<select class="form-control" id="sel1">
-						<option value="" disabled selected>Events</option>
-					</select>
+				<div id="menu" class="sideNav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="index.html">Home</a>
+					<a href="profile.html">Mi Perfil</a>
+					<a href="#">Sobre nosotros</a>
+					<a href="#">Contactanos</a>
 				</div>
-
 			</div>
-		</div>
+		</header>
 
-		<div class="events">
+		<!-- escribe tu codigo aquí-->
+		<section class="start">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-sm-12 col-xs-12 text-center">
+						<!-- boton face -->
+						<fb:login-button 
+						scope="public_profile,email"
+						onlogin="checkLoginState();">
+					</fb:login-button>
+					<p>Por favor, inicia sesión aquí.</p>
+					<!-- codigo facebook -->
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12 col-xs-12 text-center">
+					<h3>Bienvenidos a</h3>
+					<h1>Qwoka</h1>
+					<p>Es un sistema inteligente que te propone experiencias para compartir con quienes más te importan, para que te sientas más feliz.</p>
+				</div>
+			</div>
 		</div>
 	</section>
-	<section>
-		<div class="modal fade col-sm-12 col-xs-12 text-right" id="infomodal">
-			<div class="modal-dialog" id="dial">
-				<div class="container">
-					<div class="col-sm-12 col-xs-12 text-rigt">
-						<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+
+	<section class="categories">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-xs-12 text-center">
+					<div class="form-group">
+						<label for="sel1">Categorias</label>
+						<select class="form-control" id="sel1">
+							<option value="" disabled selected>Events</option>
+						</select>
 					</div>
+
 				</div>
+			</div>
 
-				
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 col-xs-12 text-left">
-							<div class="details">
-								<img src="#" alt=""><p>imagen</p>
-								<h3>nombre evento</h3>
-								<p>categoria</p>
-							</div>	
+			<div class="events">
+			</div>
+		</section>
+		<section>
+			<div class="modal fade col-sm-12 col-xs-12 text-right" id="infomodal">
+				<div class="modal-dialog" id="dial">
+					<div class="container">
+						<div class="col-sm-12 col-xs-12 text-rigt">
+							<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-sm-12 col-xs-12 text-left">
-							<p>fecha</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, excepturi expedita cupiditate, nemo aliquid rerum numquam veniam vero, quasi omnis temporibus sapiente hic suscipit odio ipsa iusto error reiciendis. Ratione! </p>
-							<a href="">Leer Mas</a>
-							<a href="#map" data-toggle="moda2">Ver Dirección</a>
 
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 col-xs-12 text-left">
-							<div class="col-sm-6 col-xs-6">
-								<p>evaluacion</p>
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-xs-12 text-left">
+								<div class="details">
+									<img src="#" alt=""><p>imagen</p>
+									<h3>nombre evento</h3>
+									<p>categoria</p>
+								</div>	
 							</div>
-							<div class="col-sm-6 col-xs-6 text-right">
-								<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div>
-							</div>
-							
 						</div>
-					</div>
+						<div class="row">
+							<div class="col-sm-12 col-xs-12 text-left">
+								<p>fecha</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, excepturi expedita cupiditate, nemo aliquid rerum numquam veniam vero, quasi omnis temporibus sapiente hic suscipit odio ipsa iusto error reiciendis. Ratione! </p>
+								<a href="">Leer Mas</a>
+								<a href="#map" data-toggle="moda2">Ver Dirección</a>
 
-	<div class="modal-items"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-xs-12 text-left">
+								<div class="col-sm-6 col-xs-6">
+									<p>evaluacion</p>
+								</div>
+								<div class="col-sm-6 col-xs-6 text-right">
+									<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div>
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="modal-items"></div>
 	<!-- <section>
 	<div class="modal fade col-sm-12 col-xs-12 text-right" id="infomodal">
 		<div class="modal-dialog" id="dial">
@@ -159,12 +154,12 @@
 <!--JS-->
 <script src="dist/js/script.js"></script>
 
-			</div>
-	</section>-->
-	<!--ICONOS-->
-	<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
-	<!--JS-->
-	<script src="dist/js/script.js"></script>
+</div>
+</section>-->
+<!--ICONOS-->
+<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
+<!--JS-->
+<script src="dist/js/script.js"></script>
 
 </body>
 </html>

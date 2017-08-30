@@ -1,7 +1,36 @@
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1650641148293432',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  function statusChangeCallback(response){
+    FB.api('/me', {fields: 'last_name'}, function(response) {
+  console.log(response.id);
+  facebookId = response.id;
+  console.log(response);
+});
+  }
+  function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
 $(document).ready(function() {
     var facebookId;
     var faceArray = [];
-
     //llamado todos los eventos
    $.ajax({
            url: 'http://dev.skynouk.com/talent/api/getEvents',
@@ -239,37 +268,6 @@ $(document).ready(function() {
                   .fail(function(res){
                     console.log("error")
                   })
-
-
-    window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '1650641148293432',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.10'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-  function statusChangeCallback(response){
-    FB.api('/me', {fields: 'last_name'}, function(response) {
-  console.log(response.id);
-  facebookId = response.id;
-  console.log(response);
-});
-  }
-  function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
 })
 
 

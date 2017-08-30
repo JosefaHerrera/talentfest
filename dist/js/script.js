@@ -12633,7 +12633,6 @@ if (typeof jQuery === 'undefined') {
 $(document).ready(function() {
     var facebookId = 1234568;
     var faceArray = [];
-
 /*  window.fbAsyncInit = function() {
     FB.init({
       appId            : '1650641148293432',
@@ -12643,7 +12642,6 @@ $(document).ready(function() {
     });
     FB.AppEvents.logPageView();
   };
-
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -12664,8 +12662,6 @@ $(document).ready(function() {
   });
 }
 */
-
-
     //llamado todos los eventos
    $.ajax({
            url: 'http://dev.skynouk.com/talent/api/getEvents',
@@ -12676,51 +12672,67 @@ $(document).ready(function() {
   
            response.data.events.forEach(function(el){
              $(".events").append(
-                '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
-                  '<div class="card-block">'+
-                  '<blockquote class="card-blockquote">'+
-                  '<div class="row">' +
-                  '<div class="col-sm-8 col-xs-8">' +
-                  '<h3>' + el.title + '</h3>' +
-                  '<div class="col-sm-4 col-xs-4">' +
-                  '<p class="text-muted">'+ el.category_name +'</p>' +
-                  '<p>' + el.date + '</p>' +
+      '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
+        '<div class="card-block">'+
+          '<blockquote class="card-blockquote">'+
+            '<div class="row">' +
+                  
+              '<div class="col-sm-12 col-xs-12 text-center">' +
+                  '<h3>' + el.title + '</h3>' + 
+                   '<p class="text-muted">'+ el.category_name +'</p>' + 
+              '</div>' +
+                 '<div class="col-sm-12 col-xs-12">' +
+                  '<div class="col-sm-6 col-xs-6">' +
+                 
+                  '<h5>' + el.date + '</h5>' +
                   '</div>' +
-                  '<div class="col-sm-4 col-xs-4">' +
+                  '<div class="col-sm-6 col-xs-6">' +
                   '<button type="button" class="btn btn-info calendar-'+ el.id +'">Quiero ir</button>' +
                   '<a href="#'+ el.id +'" data-toggle="modal">Leer Mas</a>' + 
                   '</div>' +
                   '</div>' +
+            
                   '<div class="col-sm-12 col-xs-12 text-center">' +
                   '<p>evaluación</p>' +
                   '</div>' +
-                  '</div>'+
-                  '</blockquote>'+
-                  '</div>'+
-                '</div>');
-
+              '</div>'+
+            '</blockquote>'+
+          '</div>'+
+         '</div>');
               $(".modal-items").append(
-                '<div class="modal fade" id="' + el.id + '">' +
-                  '<div class="modal-dialog">' +
-                    '<div>' +
-                    '<div>' +
-                      '<button type="button" class="btn btn-success" data-dismiss="modal">X</button>' +
-                    '</div>' +
-                    '<img src="' + el.image_url + '"class="img-responsive">' +
-                    '<div class="header-modal">' +
-                        '<h3>' + el.title + '</h3>' +
-                        '<h5>'+ el.category_name +'</h5>' +
-                        '<h6>' + el.perform_with + '</h6>' +
-                      '</div>' + 
-                      '<div class="details">' +
-                        '<p>' + el.date + '</p>' +
-                        '<p>' + el.content + '</p>' +
-                        '<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div></div>' +
-                      '</div>' +
-                    '</div>' +
-                    '</div>' +
-                  '</div>'
-                  );
+                                  '<div class="modal fade" id="' + el.id + '">' +
+                                    '<div class="modal-dialog">' +
+                                      '<div >' +
+                                        '<button type="button" class="btn btn-success" data-dismiss="modal">X</button>' +
+                                      '</div>' +
+                                      '<img src="' + el.image_url + '"class="img-responsive">' +
+                                      '<div class="header-modal">' +
+                                          '<h3>' + el.title + '</h3>' +
+                                          '<h5>'+ el.category_name +'</h5>' +
+                                          '<h6>' + el.perform_with + '</h6>' +
+                                        '</div>' +
+                                        '<div class="details">' +
+                                          '<p>' + el.date + '</p>' +
+                                          '<p>' + el.content + '</p>' +
+                                          '<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div></div>' +
+                                        '</div>' +
+                                      '</div>' +
+                                    '</div>'
+                                    );
+              //mapa
+              /*function myMap() {
+                var pointAtMap  = new google.maps.LatLng(el.location);
+                var mapProp= {
+                    center:new google.maps.LatLng(el.location),
+                    zoom:15,
+                };
+                var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                var marker = new google.maps.Marker({
+                  position: pointAtMap,
+                  map: map,
+                  title: 'foobar'
+                });
+              }*/
               $(".calendar-"+el.id).click(function(){
                   $.ajax({
                     url: 'https://dev.skynouk.com/talent/api/acceptEvent',
@@ -12743,21 +12755,16 @@ $(document).ready(function() {
        .always(function() {
           console.log('error')
        });
-
-
-
       //Select categorias y Filtro
       $.ajax({
            url: 'http://dev.skynouk.com/talent/api/getCategories',
            type: 'GET',
            datatype: 'JSON',
-
        })
        .done(function(response) {
           
            response.data.categories.forEach(function(e){
               $("#sel1").append('<option value="'+ e.id +'">'+ e.name +'</option>');
-
               $('#sel1').on('change', function() {
                     //valor seleccionado por el usuario
                     //console.log($(this).val());
@@ -12781,29 +12788,33 @@ $(document).ready(function() {
                           else{
                             data.forEach(function(el){
                                  $(".events").append(
-                                  '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
-                                    '<div class="card-block">'+
-                                    '<blockquote class="card-blockquote">'+
-                                    '<div class="row">' +
-                                    '<div class="col-sm-8 col-xs-8">' +
-                                    '<h3>' + el.title + '</h3>' +
-                                    '<div class="col-sm-4 col-xs-4">' +
-                                    '<p class="text-muted">'+ el.category_name +'</p>' +
-                                    '<p>' + el.date + '</p>' +
-                                    '</div>' +
-                                    '<div class="col-sm-4 col-xs-4">' +
-                                    '<button type="button" class="btn btn-info">Quiero ir</button>' +
-                                    '<a href="#'+el.id +'" data-toggle="modal">Leer Mas</a>' + 
-                                    '</div>' +
-                                    '</div>' +
-                                    '<div class="col-sm-12 col-xs-12 text-center">' +
-                                    '<p>evaluación</p>' +
-                                    '</div>' +
-                                    '</div>'+
-                                    '</blockquote>'+
-                                    '</div>'+
-                                  '</div>');
-
+      '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
+        '<div class="card-block">'+
+          '<blockquote class="card-blockquote">'+
+            '<div class="row">' +
+                  
+              '<div class="col-sm-12 col-xs-12 text-center">' +
+                  '<h3>' + el.title + '</h3>' + 
+                   '<p class="text-muted">'+ el.category_name +'</p>' + 
+              '</div>' +
+                 '<div class="col-sm-12 col-xs-12">' +
+                  '<div class="col-sm-6 col-xs-6">' +
+                 
+                  '<h5>' + el.date + '</h5>' +
+                  '</div>' +
+                  '<div class="col-sm-6 col-xs-6">' +
+                  '<button type="button" class="btn btn-info calendar-'+ el.id +'">Quiero ir</button>' +
+                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Mas</a>' + 
+                  '</div>' +
+                  '</div>' +
+            
+                  '<div class="col-sm-12 col-xs-12 text-center">' +
+                  '<p>evaluación</p>' +
+                  '</div>' +
+              '</div>'+
+            '</blockquote>'+
+          '</div>'+
+         '</div>');
                                   $(".modal-items").append(
                                   '<div class="modal fade" id="' + el.id + '">' +
                                     '<div class="modal-dialog">' +
@@ -12815,7 +12826,7 @@ $(document).ready(function() {
                                           '<h3>' + el.title + '</h3>' +
                                           '<h5>'+ el.category_name +'</h5>' +
                                           '<h6>' + el.perform_with + '</h6>' +
-                                        '</div>' + 
+                                        '</div>' +
                                         '<div class="details">' +
                                           '<p>' + el.date + '</p>' +
                                           '<p>' + el.content + '</p>' +
@@ -12833,7 +12844,6 @@ $(document).ready(function() {
                          .always(function() {
                              console.log('complete')
                          });
-
                     } else {
                         $('.' + e.id).remove();
                     }
@@ -12846,7 +12856,6 @@ $(document).ready(function() {
        .always(function() {
            console.log('complete')
        });
-
        //Perfil usuario
          $.ajax({
           url: 'https://dev.skynouk.com/talent/api/getCalendar',
@@ -12858,33 +12867,37 @@ $(document).ready(function() {
                     console.log(res.data.events);
                     res.data.events.forEach(function(el){
                                  $("#events-calendar").append(
-                                  '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
-                                    '<div class="card-block">'+
-                                    '<blockquote class="card-blockquote">'+
-                                    '<div class="row">' +
-                                    '<div class="col-sm-8 col-xs-8">' +
-                                    '<h3>' + el.title + '</h3>' +
-                                    '<div class="col-sm-4 col-xs-4">' +
-                                    '<p class="text-muted">'+ el.category_name +'</p>' +
-                                    '<p>' + el.date + '</p>' +
-                                    '</div>' +
-                                    '<div class="col-sm-4 col-xs-4">' +
-                                    '<button type="button" class="btn btn-info">Quiero ir</button>' +
-                                    '<a href="#calendar-'+el.id +'" data-toggle="modal">Leer Mas</a>' + 
-                                    '</div>' +
-                                    '</div>' +
-                                    '<div class="col-sm-12 col-xs-12 text-center">' +
-                                    '<p>evaluación</p>' +
-                                    '</div>' +
-                                    '</div>'+
-                                    '</blockquote>'+
-                                    '</div>'+
-                                  '</div>');
-
+      '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
+        '<div class="card-block">'+
+          '<blockquote class="card-blockquote">'+
+            '<div class="row">' +
+                  
+              '<div class="col-sm-12 col-xs-12 text-center">' +
+                  '<h3>' + el.title + '</h3>' + 
+                   '<p class="text-muted">'+ el.category_name +'</p>' + 
+              '</div>' +
+                 '<div class="col-sm-12 col-xs-12">' +
+                  '<div class="col-sm-6 col-xs-6">' +
+                 
+                  '<h5>' + el.date + '</h5>' +
+                  '</div>' +
+                  '<div class="col-sm-6 col-xs-6">' +
+                  '<button type="button" class="btn btn-info calendar-'+ el.id +'">Quiero ir</button>' +
+                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Mas</a>' + 
+                  '</div>' +
+                  '</div>' +
+            
+                  '<div class="col-sm-12 col-xs-12 text-center">' +
+                  '<p>evaluación</p>' +
+                  '</div>' +
+              '</div>'+
+            '</blockquote>'+
+          '</div>'+
+         '</div>');
                                   $(".modal-items").append(
-                                  '<div class="modal fade" id="calendar-' + el.id + '">' +
+                                  '<div class="modal fade" id="' + el.id + '">' +
                                     '<div class="modal-dialog">' +
-                                      '<div>' +
+                                      '<div >' +
                                         '<button type="button" class="btn btn-success" data-dismiss="modal">X</button>' +
                                       '</div>' +
                                       '<img src="' + el.image_url + '"class="img-responsive">' +
@@ -12892,7 +12905,7 @@ $(document).ready(function() {
                                           '<h3>' + el.title + '</h3>' +
                                           '<h5>'+ el.category_name +'</h5>' +
                                           '<h6>' + el.perform_with + '</h6>' +
-                                        '</div>' + 
+                                        '</div>' +
                                         '<div class="details">' +
                                           '<p>' + el.date + '</p>' +
                                           '<p>' + el.content + '</p>' +
@@ -12955,3 +12968,20 @@ function closeNav() {
 }
 
 
+//mapa
+function myMap() {
+	var pointAtMap  = new google.maps.LatLng(-33.4316203,-70.6562541);
+	var mapProp= {
+	    center:new google.maps.LatLng(-33.4316203,-70.6562541),
+	    zoom:15,
+	};
+	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+	var marker = new google.maps.Marker({
+		position: pointAtMap,
+		map: map,
+		title: 'foobar'
+	});
+
+}

@@ -12693,7 +12693,7 @@ $(document).ready(function() {
                   '</div>' +
             
                   '<div class="col-sm-12 col-xs-12 text-center">' +
-                  '<p>evaluación</p>' +
+                  '<div id="rateYo"></div>' +
                   '</div>' +
               '</div>'+
             '</blockquote>'+
@@ -12942,6 +12942,14 @@ $(document).ready(function() {
 
 
 
+
+                  $(function () {
+ 
+  $("#rateYo").rateYo({
+    rating: 3.6
+  });
+ 
+});
 
 $(document).ready(function() {
 	

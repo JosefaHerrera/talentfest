@@ -34,12 +34,13 @@ $(document).ready(function() {
 
               $(".modal-items").append(
                 '<div class="modal fade col-sm-12 col-xs-12 text-right" id="' + el.id + '">' +
-                  '<div class="modal-dialog container">' +
+                  '<div class="modal-dialog">' +
+                    '<div class"container">' +
                     '<div class="col-sm-12 col-xs-12 text-rigt">' +
                       '<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>' +
                     '</div>' +
                     '<div class="header-modal">' +
-                        '<img src="' + el.image_url + '">' +
+                        '<img src="' + el.image_url + '" class="img-responsive">' +
                         '<h3>' + el.title + '</h3>' +
                         '<p>'+ el.category_name +'</p>' +
                       '</div>' + 
@@ -48,6 +49,7 @@ $(document).ready(function() {
                         '<p>' + el.content + '</p>' +
                         '<p>' + el.perform_with + '</p>' +
                       '</div>' +
+                    '</div>' +
                     '</div>' +
                   '</div>'
                   );

@@ -8,42 +8,47 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 	<script>
-	window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '1650641148293432',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.10'
-    });
-    FB.AppEvents.logPageView();
-  };
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-  function statusChangeCallback(response){
-  	FB.api('/me', {fields: 'last_name'}, function(response) {
-  console.log(response.id);
-  facebookId = response.id;
-  console.log(response);
-});
-  }
-  function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId            : '1650641148293432',
+				autoLogAppEvents : true,
+				xfbml            : true,
+				version          : 'v2.10'
+			});
+			FB.AppEvents.logPageView();
+		};
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		function statusChangeCallback(response){
+			FB.api('/me', {fields: 'last_name'}, function(response) {
+				console.log(response.id);
+				facebookId = response.id;
+				console.log(response);
+			});
+		}
+		function checkLoginState() {
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+			});
+		}
 	</script>
 </head>
-<body>
+<body class="light-theme body">
 	<header>
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 nav-page">
-					<span class="text-left " onclick="openNav()">
+					<div class="col-xs-6 col-xs-offset-10">
+						<button id="color" class="btn btn-x-lgh"></button>
+						<br>
+						<button id="color" class="btn btn-x-drk"></button>
+					</div>
+					<span class="text-left" onclick="openNav()">
 						<i class="fa fa-bars fa-3x"></i> 
 					</span>
 				</div>
@@ -62,61 +67,59 @@
 			</footer>
 		</div>	
 	</header>
-
-<!-- escribe tu codigo aquí-->
-<section class="start">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-xs-12 text-center" id="facebook">
-				<!-- boton face -->
-				<fb:login-button id="loginface" scope="public_profile,email"
-				onlogin="checkLoginState();"></fb:login-button>
-			<p>Inicia sesión.</p>
-			<!-- codigo facebook -->
-			</div>
-		</div>
-
-	<div class="row">
-		<div class="col-sm-12 col-xs-12 text-center">
-			<img src="dist/img/logo-web-qwoka-02.png" alt="" class="img-responsive">
-			<p id="text1">Es un sistema inteligente que te propone experiencias para compartir con quienes más te importan, para que te sientas más feliz.</p>
-		</div>
-	</div>
-</div>
-</section>
-
-<section class="categories">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-xs-12 text-center">
-				<div class="form-group">
-					<label for="sel1">Categorias</label>
-					<select class="form-control" id="sel1">
-						<option value="" disabled selected>Events</option>
-					</select>
+	<section class="start">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-xs-12 text-center" id="facebook">
+					<!-- boton face -->
+					<fb:login-button id="loginface" scope="public_profile,email"
+					onlogin="checkLoginState();"></fb:login-button>
+					<p>Inicia sesión.</p>
+					<!-- codigo facebook -->
 				</div>
+			</div>
 
+			<div class="row">
+				<div class="col-sm-12 col-xs-12 text-center">
+					<img src="dist/img/logo-web-qwoka-02.png" alt="" class="img-responsive">
+					<p id="text1">Es un sistema inteligente que te propone experiencias para compartir con quienes más te importan, para que te sientas más feliz.</p>
+				</div>
 			</div>
 		</div>
-	<div class="row">
-		<div class="col-sm-12 col-xs-12 text-center">
-		<div class="events"></div>
-		</div>
-	</div>
+	</section>
 
-</div>
+	<section class="categories">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-xs-12 text-center">
+					<div class="form-group">
+						<label for="sel1">Categorias</label>
+						<select class="form-control" id="sel1">
+							<option value="" disabled selected>Events</option>
+						</select>
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-xs-12 text-center">
+					<div class="events"></div>
+				</div>
+			</div>
+
+		</div>
 	</section>
 	<div class="modal-items">
-		  
+
 	</div>
-		<!--ICONOS-->
+	<!--ICONOS-->
 
 
-		
-		<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
 
-		<!--JS-->
-		<script src="dist/js/script.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQF86w425Y-I4NEREP6qMvdbZpexD8iRA"></script>
-	</body>
-	</html>
+	<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
+
+	<!--JS-->
+	<script src="dist/js/script.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQF86w425Y-I4NEREP6qMvdbZpexD8iRA"></script>
+</body>
+</html>

@@ -1,12 +1,11 @@
-//sidenav
-function openNav() {
-    document.getElementById("menu").style.width = "250px";
-}
+	//sidenav
+	function openNav() {
+		document.getElementById("menu").style.width = "250px";
+	}
 
-function closeNav() {
-    document.getElementById("menu").style.width = "0";
-}
-
+	function closeNav() {
+		document.getElementById("menu").style.width = "0";
+	}
 
 //mapa
 /*

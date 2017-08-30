@@ -12703,7 +12703,7 @@ $(document).ready(function() {
                           var data = response.data.events;
                           console.log(data.length);
                           if(data.length <= 1){
-                            $(".events").append('<div><h1>ups!</h1>' +
+                            $(".events").append('<div><h1>upsi!</h1>' +
                               '<h2> Lo sentimos no hay eventos en esta categoría</h2></div>');
                           }
                           else{
@@ -12732,8 +12732,7 @@ $(document).ready(function() {
                                       '</div>'+
                                     '</div>');
                                 })
-                          }
-
+                            }
                            })
                          .fail(function(response) {
                              console.log('error')

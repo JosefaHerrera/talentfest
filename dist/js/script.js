@@ -12653,7 +12653,7 @@ $(document).ready(function() {
                   '</div>' +
                   '<div class="col-sm-4 col-xs-4">' +
                   '<button type="button" class="btn btn-info">Quiero ir</button>' +
-                  '<button type="button" class="btn btn-default">Leer Más</button>' +
+                  '<a href="#infomodal" data-toggle="modal">Leer Mas</a>' + 
                   '</div>' +
                   '</div>' +
                   '<div class="col-sm-12 col-xs-12 text-center">' +

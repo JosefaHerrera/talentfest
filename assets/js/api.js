@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var facebookId;
+    var facebookId = 1234568;
     var faceArray = [];
 
 /*  window.fbAsyncInit = function() {
@@ -68,21 +68,22 @@ $(document).ready(function() {
                 '</div>');
 
               $(".modal-items").append(
-                '<div class="modal fade col-sm-12 col-xs-12 text-right" id="' + el.id + '">' +
+                '<div class="modal fade" id="' + el.id + '">' +
                   '<div class="modal-dialog">' +
-                    '<div class"container">' +
-                    '<div class="col-sm-12 col-xs-12 text-rigt">' +
-                      '<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>' +
+                    '<div>' +
+                    '<div>' +
+                      '<button type="button" class="btn btn-success" data-dismiss="modal">X</button>' +
                     '</div>' +
+                    '<img src="' + el.image_url + '"class="img-responsive">' +
                     '<div class="header-modal">' +
-                        '<img src="' + el.image_url + '" class="img-responsive">' +
                         '<h3>' + el.title + '</h3>' +
-                        '<p>'+ el.category_name +'</p>' +
+                        '<h5>'+ el.category_name +'</h5>' +
+                        '<h6>' + el.perform_with + '</h6>' +
                       '</div>' + 
                       '<div class="details">' +
                         '<p>' + el.date + '</p>' +
                         '<p>' + el.content + '</p>' +
-                        '<p>' + el.perform_with + '</p>' +
+                        '<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div></div>' +
                       '</div>' +
                     '</div>' +
                     '</div>' +
@@ -172,20 +173,21 @@ $(document).ready(function() {
                                   '</div>');
 
                                   $(".modal-items").append(
-                                  '<div class="modal fade col-sm-12 col-xs-12 text-right" id="' + el.id + '">' +
-                                    '<div class="modal-dialog container">' +
-                                      '<div class="col-sm-12 col-xs-12 text-rigt">' +
-                                        '<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>' +
+                                  '<div class="modal fade" id="' + el.id + '">' +
+                                    '<div class="modal-dialog">' +
+                                      '<div >' +
+                                        '<button type="button" class="btn btn-success" data-dismiss="modal">X</button>' +
                                       '</div>' +
+                                      '<img src="' + el.image_url + '"class="img-responsive">' +
                                       '<div class="header-modal">' +
-                                          '<img src="' + el.image_url + '"class="img-responsive">' +
                                           '<h3>' + el.title + '</h3>' +
-                                          '<p>'+ el.category_name +'</p>' +
+                                          '<h5>'+ el.category_name +'</h5>' +
+                                          '<h6>' + el.perform_with + '</h6>' +
                                         '</div>' + 
                                         '<div class="details">' +
                                           '<p>' + el.date + '</p>' +
                                           '<p>' + el.content + '</p>' +
-                                          '<p>' + el.perform_with + '</p>' +
+                                          '<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div></div>' +
                                         '</div>' +
                                       '</div>' +
                                     '</div>'
@@ -248,20 +250,21 @@ $(document).ready(function() {
                                   '</div>');
 
                                   $(".modal-items").append(
-                                  '<div class="modal fade col-sm-12 col-xs-12 text-right" id="calendar-' + el.id + '">' +
-                                    '<div class="modal-dialog container">' +
-                                      '<div class="col-sm-12 col-xs-12 text-rigt">' +
-                                        '<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>' +
+                                  '<div class="modal fade" id="calendar-' + el.id + '">' +
+                                    '<div class="modal-dialog">' +
+                                      '<div>' +
+                                        '<button type="button" class="btn btn-success" data-dismiss="modal">X</button>' +
                                       '</div>' +
+                                      '<img src="' + el.image_url + '"class="img-responsive">' +
                                       '<div class="header-modal">' +
-                                          '<img src="' + el.image_url + '" class="img-responsive">' +
                                           '<h3>' + el.title + '</h3>' +
-                                          '<p>'+ el.category_name +'</p>' +
+                                          '<h5>'+ el.category_name +'</h5>' +
+                                          '<h6>' + el.perform_with + '</h6>' +
                                         '</div>' + 
                                         '<div class="details">' +
                                           '<p>' + el.date + '</p>' +
                                           '<p>' + el.content + '</p>' +
-                                          '<p>' + el.perform_with + '</p>' +
+                                          '<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div></div>' +
                                         '</div>' +
                                       '</div>' +
                                     '</div>'

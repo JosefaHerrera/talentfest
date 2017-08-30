@@ -69,3 +69,41 @@
 a{
 	display: block;
 }
+
+/*modal*/
+.modal{
+	background-color: #fff;
+	.btn-success{
+		background-color: $Greenwater;
+		border-color: transparent;;
+		background-color: #3cc;
+	    margin: 10px -15px;
+	    border-radius: 100px;
+	    position: absolute;
+	    right: 20px;
+	}
+	h3{
+		color: $orange;
+	}
+	.header-modal, .details{
+		padding: 0px 10px;
+		p{
+			color: grey;
+		}
+		h5{
+			color: $orange;
+		}
+		h6{
+			color: $Greenwater;
+			font-style: italic;
+			font-size: 15px;
+		}
+	}
+}
+.modal.in .modal-dialog {
+    width: 100%;
+    margin: 0;
+}
+.fade.in {
+    padding-right: 0px!important;
+}   

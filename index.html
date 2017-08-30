@@ -40,20 +40,6 @@
 </head>
 <body class="light-theme body">
 	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 nav-page">
-					<div class="col-xs-6 col-xs-offset-10">
-						<button id="color" class="btn btn-x-lgh"></button>
-						<br>
-						<button id="color" class="btn btn-x-drk"></button>
-					</div>
-					<span class="text-left" onclick="openNav()">
-						<i class="fa fa-bars fa-3x"></i> 
-					</span>
-				</div>
-			</div>
-		</div>
 		<div id="menu" class="sideNav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="index.html">Home</a>
@@ -67,59 +53,72 @@
 			</footer>
 		</div>	
 	</header>
-	<section class="start">
+	<section class="start">	
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 col-xs-12 text-center" id="facebook">
-					<!-- boton face -->
-					<fb:login-button id="loginface" scope="public_profile,email"
-					onlogin="checkLoginState();"></fb:login-button>
-					<p>Inicia sesión.</p>
-					<!-- codigo facebook -->
-				</div>
-			</div>
+				<div class="col-xs-12 navigation-page">
+					<div class="col-sm-4 col-xs-4">
+						<span class="text-left" onclick="openNav()">
+							<i class="fa fa-bars fa-3x"></i> 
+						</span>
+					</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-xs-12 text-center">
-					<img src="dist/img/logo-web-qwoka-02.png" alt="" class="img-responsive">
-					<p id="text1">Es un sistema inteligente que te propone experiencias para compartir con quienes más te importan, para que te sientas más feliz.</p>
-				</div>
-			</div>
-		</div>
-	</section>
+					<div class="col-sm-4 col-xs-4 text-center" id="facebook">
+						<!-- boton face -->
+						<fb:login-button id="loginface" scope="public_profile,email"
+						onlogin="checkLoginState();"></fb:login-button>
+						<p>Inicia sesión.</p>
+						<!-- codigo facebook -->
+					</div>
 
-	<section class="categories">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-xs-12 text-center">
-					<div class="form-group">
-						<label for="sel1">Categorias</label>
-						<select class="form-control" id="sel1">
-							<option value="" disabled selected>Events</option>
-						</select>
+					<div class="col-sm-4 col-xs-4 text-right" id="btnGroup">
+						<button id="color" class="btn btn-x-lgh"></button>
+						<button id="color" class="btn btn-x-drk"></button>
 					</div>
 
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-12 col-xs-12 text-center">
-					<div class="events"></div>
-				</div>
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 text-center">
+				<img src="dist/img/logo-web-qwoka-02.png" alt="" class="img-responsive">
+				<p id="text1">Es un sistema inteligente que te propone experiencias para compartir con quienes más te importan, para que te sientas más feliz.</p>
 			</div>
-
 		</div>
-	</section>
-	<div class="modal-items">
+	</div>
+</section>
+
+<section class="categories">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 text-center">
+				<div class="form-group">
+					<label for="sel1">Categorias</label>
+					<select class="form-control" id="sel1">
+						<option value="" disabled selected>Events</option>
+					</select>
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 text-center">
+				<div class="events"></div>
+			</div>
+		</div>
 
 	</div>
-	<!--ICONOS-->
+</section>
+<div class="modal-items">
+
+</div>
+<!--ICONOS-->
 
 
 
-	<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
+<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
 
-	<!--JS-->
-	<script src="dist/js/script.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQF86w425Y-I4NEREP6qMvdbZpexD8iRA"></script>
+<!--JS-->
+<script src="dist/js/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQF86w425Y-I4NEREP6qMvdbZpexD8iRA"></script>
 </body>
 </html>

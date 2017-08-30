@@ -5,8 +5,8 @@
 		margin-top: 15px;
 		color: $Greenwater;
 	}
-	.nav-page{
-		padding: 20px 10px;
+	.navigation-page{
+		padding: 15px 10px;
 		.navbar-brand{
 			float: right;
 			height: 70px;
@@ -16,12 +16,17 @@
 	    	line-height: 2.5;
 	    	border-radius: 25px;
 	    	padding:7px;
+	    	border:none;
 		}
 	}
-	.btn-drk, .btn-x-drk{
+	.card-block{
+		background: whitesmoke;
+	}
+
+	.btn-x-drk{
 		background-color: $Navyblue;
 	    }
-	.btn-lgh, .btn-x-lgh{
+	.btn-x-lgh{
 		background-color: $Greenwater;
 	}
 	.sideNav {
@@ -111,8 +116,9 @@
 	.fade.in {
 	    padding-right: 0px!important;
 	}
-	#facebook{
-		margin-top:-10%;
+	#facebook,
+	#btnGroup button{
+		margin-top: 13%;
 	}
 	label{
 		color:$orange;
@@ -150,24 +156,30 @@
 .dark-theme{
 		font-family: $font;
 		background-color: #000; 
+		color: $orange;
 	.fa-bars{
 		margin-top: 15px;
 		color: $orange;
 	}
-	.nav-page{
-		padding: 20px 10px;
+	.navigation-page{
+		padding: 15px 10px;
 		.navbar-brand{
 			float: right;
 			height: 70px;
 		}
-	}
 	.btn{
     	line-height: 2.5;
     	border-radius: 25px;
     	padding:7px;
-    	button:active{
-		border: none;
+    	border:none;
+		}
 	}
+}
+	.card-block{
+		background: rgba(53, 84, 84, 0.5);
+	}
+	.text-muted{
+		color: whitesmoke;
 	}
 	
 	.btn-x-drk{
@@ -264,7 +276,7 @@
 	    padding-right: 0px!important;
 	}
 	#facebook{
-		margin-top:-10%;
+		margin-top:13%;
 	}
 	label{
 		color:$Greenwater;
@@ -296,4 +308,3 @@
 		    padding-left: 15px;
 		}
 	}
-}

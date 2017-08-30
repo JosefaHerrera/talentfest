@@ -33,10 +33,10 @@ $(document).ready(function() {
                 '</div>');
 
               $(".modal-items").append(
-                '<div class="modal fade col-sm-12 col-xs-12 text-center" id="' + el.id + '">' +
+                '<div class="modal fade col-sm-12 col-xs-12 text-right" id="' + el.id + '">' +
                   '<div class="modal-dialog">' +
                     '<div class"container">' +
-                    '<div class="col-sm-12 col-xs-12 text-center">' +
+                    '<div class="col-sm-12 col-xs-12 text-rigt">' +
                       '<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>' +
                     '</div>' +
                     '<div class="header-modal">' +
@@ -48,8 +48,8 @@ $(document).ready(function() {
                         '<p>' + el.date + '</p>' +
                         '<p>' + el.content + '</p>' +
                         '<p>' + el.perform_with + '</p>' +
-                        '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+
-                        el.location+ '&zoom=15&size=400x400&key=AIzaSyD9L8sksBMfZ8OcWy1T9Rq463SZuBl2crE" alt="">' +
+                       /* '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+
+                        el.location+ '&zoom=15&size=400x400&key=AIzaSyD9L8sksBMfZ8OcWy1T9Rq463SZuBl2crE" alt="">' */ +
                       '</div>' +
                     '</div>' +
                     '</div>' +

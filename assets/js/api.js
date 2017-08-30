@@ -1,5 +1,6 @@
 $(document).ready(function() {
     //llamado todos los eventos
+    var favEvents = [];
    $.ajax({
            url: 'http://dev.skynouk.com/talent/api/getEvents',
            type: 'GET',
@@ -20,8 +21,8 @@ $(document).ready(function() {
                   '<p>' + el.date + '</p>' +
                   '</div>' +
                   '<div class="col-sm-4 col-xs-4">' +
-                  '<button type="button" class="btn btn-info">Quiero ir</button>' +
-                  '<a href="#'+el.id +'" data-toggle="modal">Leer Mas</a>' + 
+                  '<button type="button" class="btn btn-info calendar-'+ el.id +'">Quiero ir</button>' +
+                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Mas</a>' + 
                   '</div>' +
                   '</div>' +
                   '<div class="col-sm-12 col-xs-12 text-center">' +
@@ -53,6 +54,11 @@ $(document).ready(function() {
                     '</div>' +
                   '</div>'
                   );
+              $(".calendar-"+el.id).click(function(){
+                  console.log($(this).closest(".card")[0].outerHTML);
+                  localStorage.card = $(this).closest(".card")[0].outerHTML;
+
+              })
             })
          })
        .fail(function() {
@@ -167,3 +173,4 @@ $(document).ready(function() {
         
 
 })
+$("#events-calendar").append(localStorage.card);

@@ -56,17 +56,12 @@
 @media screen and (max-height: 450px) {
     .sideNav {padding-top: 15px;}
     .sideNav a {font-size: 18px;}
+  
  }
 
- .circular {
-	width: 300px;
-	height: 300px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
-	background: url() no-repeat;
-	}
-
+blockquote{
+	border-left: 5px solid $orange;
+}
 
 #sel1{
 	width:80%;

@@ -27,7 +27,11 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
   function statusChangeCallback(response){
-  	console.log("j");
+  	FB.api('/me', {fields: 'last_name'}, function(response) {
+  console.log(response.id);
+  facebookId = response.id;
+  console.log(response);
+});
   }
   function checkLoginState() {
   FB.getLoginStatus(function(response) {

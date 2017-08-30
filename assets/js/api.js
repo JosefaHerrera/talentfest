@@ -27,11 +27,7 @@ FB.getLoginStatus(function(response) {
   }
 });
 */
-FB.api('/me', {fields: 'last_name'}, function(response) {
-  console.log(response.id);
-  facebookId = response.id;
-});
-console.log(facebookId);
+
 
 
     //llamado todos los eventos

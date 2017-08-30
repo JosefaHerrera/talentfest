@@ -1,4 +1,8 @@
-  window.fbAsyncInit = function() {
+$(document).ready(function() {
+    var facebookId;
+    var faceArray = [];
+
+/*  window.fbAsyncInit = function() {
     FB.init({
       appId            : '1650641148293432',
       autoLogAppEvents : true,
@@ -27,10 +31,9 @@
     statusChangeCallback(response);
   });
 }
+*/
 
-$(document).ready(function() {
-    var facebookId;
-    var faceArray = [];
+
     //llamado todos los eventos
    $.ajax({
            url: 'http://dev.skynouk.com/talent/api/getEvents',

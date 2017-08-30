@@ -1,5 +1,39 @@
-    var facebookId = 1234568;
+    var facebookId;
     var faceArray = [];
+function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    }
+
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    console.log('Logged in.');
+  }
+  else {
+    FB.login();
+  }
+});
+
+FB.api('/me', {fields: 'last_name'}, function(response) {
+  console.log(response.id);
+  facebookId = response.id;
+});
+console.log(facebookId);
+
+
+
+
 
 $(document).ready(function() {
     //llamado todos los eventos
@@ -10,7 +44,7 @@ $(document).ready(function() {
        })
        .done(function(response) {
   
-           response.data.events.forEach(function(el){          
+           response.data.events.forEach(function(el){
              $(".events").append(
                 '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
                   '<div class="card-block">'+
@@ -240,5 +274,6 @@ $(document).ready(function() {
                     console.log("error")
                   })
 })
+
 
 

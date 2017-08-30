@@ -12693,7 +12693,7 @@ $(document).ready(function() {
                   '</div>' +
             
                   '<div class="col-sm-12 col-xs-12 text-center">' +
-                  '<p>evaluación</p>' +
+                  '<div id="rateYo"></div>' +
                   '</div>' +
               '</div>'+
             '</blockquote>'+
@@ -12919,10 +12919,16 @@ $(document).ready(function() {
                   .fail(function(res){
                     console.log("error")
                   })
+
+
+                  $(function () {
+ 
+  $("#rateYo").rateYo({
+    rating: 3.6
+  });
+ 
+});
 })
-
-
-
 
 /*window.fbAsyncInit = function() {
     FB.init({

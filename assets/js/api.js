@@ -256,7 +256,10 @@ $(document).ready(function() {
                   '</div>' +
             
                   '<div class="col-sm-12 col-xs-12 text-center">' +
-                  '<p>evaluación</p>' +
+                  '<div class="rate">'+
+  '<div class="emoji">😑</div>' +
+  '<input class="carita" type="range" min="0" max="4" step="1">'+
+'</div>' +
                   '</div>' +
               '</div>'+
             '</blockquote>'+
@@ -283,6 +286,13 @@ $(document).ready(function() {
                                     '</div>'
                                     );
                     })
+                    var emojis = ['😠','😦','😑','😀','😍'];
+
+                    $(".carita").mousemove(function(){
+                      var i = $(this).val();
+                      $(".emoji").html(emojis[i]);
+                    });
+
                   })
                   .fail(function(res){
                     console.log("error")

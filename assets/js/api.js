@@ -1,3 +1,4 @@
+$(document).ready(function() {
     var facebookId;
     var faceArray = [];
 function checkLoginState() {
@@ -32,10 +33,6 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
 console.log(facebookId);
 
 
-
-
-
-$(document).ready(function() {
     //llamado todos los eventos
    $.ajax({
            url: 'http://dev.skynouk.com/talent/api/getEvents',

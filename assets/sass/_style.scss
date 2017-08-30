@@ -1,5 +1,5 @@
 .light-theme{
-		font-family: $font;
+	font-family: $font;
 	
 	.fa-bars{
 		margin-top: 15px;
@@ -11,12 +11,12 @@
 			float: right;
 			height: 70px;
 		}
-	
+		
 		.btn{
-	    	line-height: 2.5;
-	    	border-radius: 25px;
-	    	padding:7px;
-	    	border:none;
+			line-height: 2.5;
+			border-radius: 25px;
+			padding:7px;
+			border:none;
 		}
 	}
 	.card-block{
@@ -25,52 +25,52 @@
 
 	.btn-x-drk{
 		background-color: $Navyblue;
-	    }
+	}
 	.btn-x-lgh{
 		background-color: $Greenwater;
 	}
 	.sideNav {
-	    height: 100vh; 
-	    width: 0; 
-	    position: fixed;
-	    z-index: 1; 
-	    top: 0;
-	    left: 0;
-	    background-color: $Greenwater; 
-	    overflow-x: hidden;
-	    padding-top: 60px;
-	    transition: 0.5s;    
-	    a {
-		    padding: 20px 8px 8px 32px;
-		    text-decoration: none;
-		    font-size: 20px;
-		    color: $Navyblue;
-		    display: block;
-		    transition: 0.3s
+		height: 100vh; 
+		width: 0; 
+		position: fixed;
+		z-index: 1; 
+		top: 0;
+		left: 0;
+		background-color: $Greenwater; 
+		overflow-x: hidden;
+		padding-top: 60px;
+		transition: 0.5s;    
+		a {
+			padding: 20px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 20px;
+			color: $Navyblue;
+			display: block;
+			transition: 0.3s
 		}
 		a:hover, .offcanvas a:focus{
-	 	    color: $orange;
+			color: $orange;
 		}
 		.closebtn {
-		    position: absolute;
-		    top: 0;
-		    right: 25px;
-		    font-size: 36px;
-		    margin-left: 50px;
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
 		}
 		.navbar-brand{
-		float: right;
-		margin-top: 48vh;
-		height: 55px;
+			float: right;
+			margin-top: 48vh;
+			height: 55px;
 		}
 	}
 	#profile-options a{
 		margin-top: 30px;
 	}
 	@media screen and (max-height: 450px) {
-	    .sideNav {padding-top: 15px;}
-	    .sideNav a {font-size: 18px;}
-	 }
+		.sideNav {padding-top: 15px;}
+		.sideNav a {font-size: 18px;}
+	}
 	#sel1{
 		width:100%;
 	}
@@ -86,10 +86,10 @@
 			background-color: $Greenwater;
 			border-color: transparent;;
 			background-color: #3cc;
-		    margin: 10px -15px;
-		    border-radius: 100px;
-		    position: absolute;
-		    right: 20px;
+			margin: 10px -15px;
+			border-radius: 100px;
+			position: absolute;
+			right: 20px;
 		}
 		h3{
 			color: $orange;
@@ -110,11 +110,11 @@
 		}
 	}
 	.modal.in .modal-dialog {
-	    width: 100%;
-	    margin: 0;
+		width: 100%;
+		margin: 0;
 	}
 	.fade.in {
-	    padding-right: 0px!important;
+		padding-right: 0px!important;
 	}
 	#facebook,
 	#btnGroup button{
@@ -143,20 +143,83 @@
 		background-color:$Greenwater;
 		color:#fff;
 		.footer .container {
-		    position: relative;
-		    margin-left: auto;
-		    margin-right: auto;
-		    padding-right: 15px;
-		    padding-left: 15px;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			padding-right: 15px;
+			padding-left: 15px;
 		}
+	}
+	// xperience style
+	#tcb-testimonial-carousel {
+		margin-top: 30px;
+	}
+	#tcb-testimonial-carousel a {
+		color: $Greenwater;
+	}
+	#tcb-testimonial-carousel .text-brand {
+		color: $Greenwater;
+	}
+	#tcb-testimonial-carousel .carousel-indicators .active {
+		background: $Greenwater;
+	}
+	#tcb-testimonial-carousel .no-margin {
+		margin: 0;
+	}
+	#tcb-testimonial-carousel .carousel-indicators li {
+		border: 1px solid $orange;
+	}
+	#tcb-testimonial-carousel .carousel-control {
+		color: $orange;
+		width: 5%;
+	}
+	#tcb-testimonial-carousel .carousel-control:hover,
+	#tcb-testimonial-carousel .carousel-control:focus {
+		color: $Greenwater;
+	}
+	#tcb-testimonial-carousel .carousel-control.left,
+	#tcb-testimonial-carousel .carousel-control.right {
+		background-image: none;
+	}
+	#tcb-testimonial-carousel .item {
+		padding: 15px 40px;
+		background: #f8f8f8;
+	}
+	#tcb-testimonial-carousel .media-object {
+		margin: auto;
+	}
+	@media screen and (max-width: 768px) {
+		#tcb-testimonial-carousel .media-object {
+			margin-bottom: 15px;
+		}
+	}
+	.questions{
+
+		.btn{
+			background-color: $Greenwater;
+			width: 300px;
+			height: 50px;
+			border-radius: 0px;
+			margin-top:20px;
+			color: white;
+			font-size: 20px;
+		}
+
+
+	}
+
+	#about{
+		color:$orange;
+		margin-top:3%;
+
 	}
 
 
 }
 .dark-theme{
-		font-family: $font;
-		background-color: #000; 
-		color: $orange;
+	font-family: $font;
+	background-color: #000; 
+	color: $orange;
 	.fa-bars{
 		margin-top: 15px;
 		color: $orange;
@@ -167,14 +230,14 @@
 			float: right;
 			height: 70px;
 		}
-	.btn{
-    	line-height: 2.5;
-    	border-radius: 25px;
-    	padding:7px;
-    	border:none;
+		.btn{
+			line-height: 2.5;
+			border-radius: 25px;
+			padding:7px;
+			border:none;
 		}
 	}
-}
+
 	.card-block{
 		background: rgba(53, 84, 84, 0.5);
 	}
@@ -184,52 +247,52 @@
 	
 	.btn-x-drk{
 		background-color: $Navyblue;
-	    }
+	}
 	.btn-x-lgh{
 		background-color: $Greenwater;
 	}
 	.sideNav {
-	    height: 100vh; 
-	    width: 0; 
-	    position: fixed;
-	    z-index: 1; 
-	    top: 0;
-	    left: 0;
-	    background-color: $orange; 
-	    overflow-x: hidden;
-	    padding-top: 60px;
-	    transition: 0.5s;    
-	    a {
-		    padding: 20px 8px 8px 32px;
-		    text-decoration: none;
-		    font-size: 20px;
-		    color: $white;
-		    display: block;
-		    transition: 0.3s
+		height: 100vh; 
+		width: 0; 
+		position: fixed;
+		z-index: 1; 
+		top: 0;
+		left: 0;
+		background-color: $orange; 
+		overflow-x: hidden;
+		padding-top: 60px;
+		transition: 0.5s;    
+		a {
+			padding: 20px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 20px;
+			color: $white;
+			display: block;
+			transition: 0.3s
 		}
 		a:hover, .offcanvas a:focus{
-	 	    color: $Greenwater;
+			color: $Greenwater;
 		}
 		.closebtn {
-		    position: absolute;
-		    top: 0;
-		    right: 25px;
-		    font-size: 36px;
-		    margin-left: 50px;
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
 		}
 		.navbar-brand{
-		float: right;
-		margin-top: 48vh;
-		height: 55px;
+			float: right;
+			margin-top: 48vh;
+			height: 55px;
 		}
 	}
 	#profile-options a{
 		margin-top: 30px;
 	}
 	@media screen and (max-height: 450px) {
-	    .sideNav {padding-top: 15px;}
-	    .sideNav a {font-size: 18px;}
-	 }
+		.sideNav {padding-top: 15px;}
+		.sideNav a {font-size: 18px;}
+	}
 	#sel1{
 		width:100%;
 	}
@@ -245,10 +308,10 @@
 			background-color: $orange;
 			border-color: transparent;;
 			background-color: #3cc;
-		    margin: 10px -15px;
-		    border-radius: 100px;
-		    position: absolute;
-		    right: 20px;
+			margin: 10px -15px;
+			border-radius: 100px;
+			position: absolute;
+			right: 20px;
 		}
 		h3{
 			color: $Greenwater;
@@ -269,11 +332,11 @@
 		}
 	}
 	.modal.in .modal-dialog {
-	    width: 100%;
-	    margin: 0;
+		width: 100%;
+		margin: 0;
 	}
 	.fade.in {
-	    padding-right: 0px!important;
+		padding-right: 0px!important;
 	}
 	#facebook{
 		margin-top:13%;
@@ -301,10 +364,75 @@
 		background-color:$orange;
 		color:#fff;
 		.footer .container {
-		    position: relative;
-		    margin-left: auto;
-		    margin-right: auto;
-		    padding-right: 15px;
-		    padding-left: 15px;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			padding-right: 15px;
+			padding-left: 15px;
 		}
 	}
+	// xperience style
+	#tcb-testimonial-carousel {
+		margin-top: 30px;
+	}
+	#tcb-testimonial-carousel a {
+		color: $white;
+	}
+	#tcb-testimonial-carousel .text-brand {
+		color: $white;
+	}
+	#tcb-testimonial-carousel .carousel-indicators .active {
+		background: $white;
+	}
+	#tcb-testimonial-carousel .no-margin {
+		margin: 0;
+	}
+	#tcb-testimonial-carousel .carousel-indicators li {
+		border: 1px solid $orange;
+	}
+	#tcb-testimonial-carousel .carousel-control {
+		color: $orange;
+		width: 5%;
+	}
+	#tcb-testimonial-carousel .carousel-control:hover,
+	#tcb-testimonial-carousel .carousel-control:focus {
+		color: $white;
+	}
+	#tcb-testimonial-carousel .carousel-control.left,
+	#tcb-testimonial-carousel .carousel-control.right {
+		background-image: none;
+	}
+	#tcb-testimonial-carousel .item {
+		padding: 15px 40px;
+		background: $orange;
+		color: $white;
+	}
+	#tcb-testimonial-carousel .media-object {
+		margin: auto;
+	}
+	@media screen and (max-width: 768px) {
+		#tcb-testimonial-carousel .media-object {
+			margin-bottom: 15px;
+		}
+	}
+	.questions{
+
+		.btn{
+			background-color: $orange;
+			width: 300px;
+			height: 50px;
+			border-radius: 0px;
+			margin-top:20px;
+			color: white;
+			font-size: 20px;
+		}
+
+	}
+
+	#about{
+		color:$Greenwater;
+		margin-top:3%;
+
+	}
+
+}

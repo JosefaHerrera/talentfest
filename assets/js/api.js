@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //llamado todos los eventos
-    var favEvents = [];
+    var facebookId = 1234568;
    $.ajax({
            url: 'http://dev.skynouk.com/talent/api/getEvents',
            type: 'GET',
@@ -55,9 +55,18 @@ $(document).ready(function() {
                   '</div>'
                   );
               $(".calendar-"+el.id).click(function(){
-                  console.log($(this).closest(".card")[0].outerHTML);
-                  localStorage.card = $(this).closest(".card")[0].outerHTML;
-
+                  $.ajax({
+                    url: 'https://dev.skynouk.com/talent/api/acceptEvent',
+                    type: 'POST',
+                    datatype: 'JSON',
+                    data    : {'event_id' : el.id, 'facebook_id' : facebookId },
+                  })
+                  .done(function(res){
+                    console.log(res)
+                  })
+                  .fail(function(res){
+                    console.log("error")
+                  })
               })
             })
          })
@@ -170,7 +179,17 @@ $(document).ready(function() {
            console.log('complete')
        });
 
-        
+        $.ajax({
+                    url: 'https://dev.skynouk.com/talent/api/getCalendar',
+                    type: 'POST',
+                    datatype: 'JSON',
+                    data    : {'facebook_id' : facebookId},
+                  })
+                  .done(function(res){
+                    console.log(res)
+                  })
+                  .fail(function(res){
+                    console.log("error")
+                  })
 
 })
-$("#events-calendar").append(localStorage.card);

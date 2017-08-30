@@ -12969,6 +12969,7 @@ function closeNav() {
 
 
 //mapa
+/*
 function myMap() {
 	var pointAtMap  = new google.maps.LatLng(-33.4316203,-70.6562541);
 	var mapProp= {
@@ -12985,3 +12986,4 @@ function myMap() {
 	});
 
 }
+*/

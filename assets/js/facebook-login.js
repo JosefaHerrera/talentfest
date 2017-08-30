@@ -1,4 +1,4 @@
-window.fbAsyncInit = function() {
+/*window.fbAsyncInit = function() {
     FB.init({
       appId      : '1650641148293432',
       cookie     : true,
@@ -24,3 +24,4 @@ window.fbAsyncInit = function() {
     statusChangeCallback(response);
   });
 }
+*/

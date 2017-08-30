@@ -56,7 +56,7 @@ $(document).ready(function() {
                   '</div>' +
                   '<div class="col-sm-6 col-xs-6">' +
                   '<button type="button" class="btn btn-info calendar-'+ el.id +'">Quiero ir</button>' +
-                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Mas</a>' + 
+                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Más</a>' + 
                   '</div>' +
                   '</div>' +
             
@@ -172,7 +172,7 @@ $(document).ready(function() {
                   '</div>' +
                   '<div class="col-sm-6 col-xs-6">' +
                   '<button type="button" class="btn btn-info calendar-'+ el.id +'">Quiero ir</button>' +
-                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Mas</a>' + 
+                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Más</a>' + 
                   '</div>' +
                   '</div>' +
             
@@ -251,7 +251,7 @@ $(document).ready(function() {
                   '</div>' +
                   '<div class="col-sm-6 col-xs-6">' +
                   '<button type="button" class="btn btn-info calendar-'+ el.id +'">Quiero ir</button>' +
-                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Mas</a>' + 
+                  '<a href="#'+ el.id +'" data-toggle="modal">Leer Más</a>' + 
                   '</div>' +
                   '</div>' +
             

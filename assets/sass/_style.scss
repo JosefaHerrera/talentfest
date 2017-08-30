@@ -145,3 +145,25 @@ label{
     padding-left: 15px;
 }
 }
+
+
+/*upsi*/
+.upsi{
+	text-align: center;
+	h1{
+		color: $Greenwater;
+		font-size: 25px
+	}
+	h2{
+		color: grey;
+		font-size: 15px;
+		margin: 0;
+		padding: 0;
+	}
+	img{
+		vertical-align: middle;
+	    width: 25%;
+	    text-align: center;
+	    margin: 0 auto;
+	}
+}

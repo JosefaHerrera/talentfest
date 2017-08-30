@@ -12631,7 +12631,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 $(document).ready(function() {
-    var facebookId = 478648959181573;
+    var facebookId = 1234568;
     var faceArray = [];
 /*  window.fbAsyncInit = function() {
     FB.init({
@@ -12782,7 +12782,7 @@ $(document).ready(function() {
                           var data = response.data.events;
                           console.log(data.length);
                           if(data.length <= 1){
-                            $(".events").append('<div><h1>upsi!</h1>' +
+                            $(".events").append('<div class="upsi"><img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sad_Face_Emoji_large.png?v=1480481055" class="img-responsive"><h1>upsi!</h1>' +
                               '<h2> Lo sentimos no hay eventos en esta categoría</h2></div>');
                           }
                           else{
@@ -12972,6 +12972,14 @@ function closeNav() {
 }
 
 
+//emoji
+
+var emojis = ['😠','😦','😑','😀','😍'];
+
+$(".caras").mousemove(function(){
+	var i = $(this).val();
+	$(".emoji").html(emojis[i]);
+});
 
 
 

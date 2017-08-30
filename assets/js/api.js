@@ -33,10 +33,10 @@ $(document).ready(function() {
                 '</div>');
 
               $(".modal-items").append(
-                '<div class="modal fade col-sm-12 col-xs-12 text-right" id="' + el.id + '">' +
+                '<div class="modal fade col-sm-12 col-xs-12 text-center" id="' + el.id + '">' +
                   '<div class="modal-dialog">' +
                     '<div class"container">' +
-                    '<div class="col-sm-12 col-xs-12 text-rigt">' +
+                    '<div class="col-sm-12 col-xs-12 text-center">' +
                       '<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>' +
                     '</div>' +
                     '<div class="header-modal">' +
@@ -48,11 +48,30 @@ $(document).ready(function() {
                         '<p>' + el.date + '</p>' +
                         '<p>' + el.content + '</p>' +
                         '<p>' + el.perform_with + '</p>' +
+                        '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+
+                        el.location+ '&zoom=15&size=400x400&key=AIzaSyD9L8sksBMfZ8OcWy1T9Rq463SZuBl2crE" alt="">' +
                       '</div>' +
                     '</div>' +
                     '</div>' +
                   '</div>'
                   );
+              //mapa
+              /*function myMap() {
+                var pointAtMap  = new google.maps.LatLng(el.location);
+                var mapProp= {
+                    center:new google.maps.LatLng(el.location),
+                    zoom:15,
+                };
+                var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+                var marker = new google.maps.Marker({
+                  position: pointAtMap,
+                  map: map,
+                  title: 'foobar'
+                });
+
+              }*/
             })
          })
        .fail(function() {
@@ -132,12 +151,13 @@ $(document).ready(function() {
                                           '<img src="' + el.image_url + '">' +
                                           '<h3>' + el.title + '</h3>' +
                                           '<p>'+ el.category_name +'</p>' +
-                                        '</div>' + 
+                                      '</div>' + 
+
                                         '<div class="details">' +
                                           '<p>' + el.date + '</p>' +
                                           '<p>' + el.content + '</p>' +
-                                          '<p>' + el.perform_with + '</p>' +
-                                        '</div>' +
+                                          '<p>' + el.perform_with + '</p>' + 
+                                        '</div>'+
                                       '</div>' +
                                     '</div>'
                                     );

@@ -12680,11 +12680,29 @@ $(document).ready(function() {
                         '<p>' + el.date + '</p>' +
                         '<p>' + el.content + '</p>' +
                         '<p>' + el.perform_with + '</p>' +
+                        '<img src="https://maps.googleapis.com/maps/api/staticmap?center=-33.4316203,-70.6562541&zoom=15&size=400x400&key=AIzaSyD9L8sksBMfZ8OcWy1T9Rq463SZuBl2crE" alt="">' +
                       '</div>' +
                     '</div>' +
                     '</div>' +
                   '</div>'
                   );
+              //mapa
+              function myMap() {
+                var pointAtMap  = new google.maps.LatLng(el.location);
+                var mapProp= {
+                    center:new google.maps.LatLng(el.location),
+                    zoom:15,
+                };
+                var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+                var marker = new google.maps.Marker({
+                  position: pointAtMap,
+                  map: map,
+                  title: 'foobar'
+                });
+
+              }
             })
          })
        .fail(function() {
@@ -12764,12 +12782,13 @@ $(document).ready(function() {
                                           '<img src="' + el.image_url + '">' +
                                           '<h3>' + el.title + '</h3>' +
                                           '<p>'+ el.category_name +'</p>' +
-                                        '</div>' + 
+                                      '</div>' + 
+
                                         '<div class="details">' +
                                           '<p>' + el.date + '</p>' +
                                           '<p>' + el.content + '</p>' +
-                                          '<p>' + el.perform_with + '</p>' +
-                                        '</div>' +
+                                          '<p>' + el.perform_with + '</p>' + 
+                                        '</div>'+
                                       '</div>' +
                                     '</div>'
                                     );
@@ -12843,3 +12862,20 @@ function closeNav() {
 }
 
 
+//mapa
+function myMap() {
+	var pointAtMap  = new google.maps.LatLng(-33.4316203,-70.6562541);
+	var mapProp= {
+	    center:new google.maps.LatLng(-33.4316203,-70.6562541),
+	    zoom:15,
+	};
+	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+	var marker = new google.maps.Marker({
+		position: pointAtMap,
+		map: map,
+		title: 'foobar'
+	});
+
+}

@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var facebookId;
     var faceArray = [];
+    /*
 function checkLoginState() {
       FB.getLoginStatus(function(response) {
         statusChangeCallback(response);
@@ -25,7 +26,7 @@ FB.getLoginStatus(function(response) {
     FB.login();
   }
 });
-
+*/
 FB.api('/me', {fields: 'last_name'}, function(response) {
   console.log(response.id);
   facebookId = response.id;

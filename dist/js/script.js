@@ -12934,6 +12934,19 @@ $(document).ready(function() {
 
 
 
+$(document).ready(function() {
+	
+		$(".btn-x-drk").click(function(){
+			$(".body").removeClass("light-theme");
+			$(".body").addClass("dark-theme");
+		});
+
+		$(".btn-x-lgh").click(function(){
+			$(".body").removeClass("dark-theme");
+			$(".body").addClass("light-theme");
+		});
+});
+
 /*window.fbAsyncInit = function() {
     FB.init({
       appId      : '1650641148293432',
@@ -12962,24 +12975,14 @@ $(document).ready(function() {
 }
 */
 
-//sidenav
-function openNav() {
-    document.getElementById("menu").style.width = "250px";
-}
+	//sidenav
+	function openNav() {
+		document.getElementById("menu").style.width = "250px";
+	}
 
-function closeNav() {
-    document.getElementById("menu").style.width = "0";
-}
-
-
-//emoji
-
-var emojis = ['😠','😦','😑','😀','😍'];
-
-$(".caras").mousemove(function(){
-	var i = $(this).val();
-	$(".emoji").html(emojis[i]);
-});
+	function closeNav() {
+		document.getElementById("menu").style.width = "0";
+	}
 
 
 

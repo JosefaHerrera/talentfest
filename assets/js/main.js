@@ -1,21 +1,11 @@
-//sidenav
-function openNav() {
-    document.getElementById("menu").style.width = "250px";
-}
+	//sidenav
+	function openNav() {
+		document.getElementById("menu").style.width = "250px";
+	}
 
-function closeNav() {
-    document.getElementById("menu").style.width = "0";
-}
-
-
-//emoji
-
-var emojis = ['😠','😦','😑','😀','😍'];
-
-$(".caras").mousemove(function(){
-	var i = $(this).val();
-	$(".emoji").html(emojis[i]);
-});
+	function closeNav() {
+		document.getElementById("menu").style.width = "0";
+	}
 
 
 

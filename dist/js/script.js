@@ -12703,11 +12703,11 @@ $(document).ready(function() {
                           var data = response.data.events;
                           console.log(data.length);
                           if(data.length <= 1){
-                            $(".events").append('<div><h1>ups!</h1>' +
+                            $(".events").append('<div><h1>upsi!</h1>' +
                               '<h2> Lo sentimos no hay eventos en esta categoría</h2></div>');
                           }
                           else{
-                            data.forEach(function(el){                        
+                            data.forEach(function(el){
                                  $(".events").append(
                                     '<div class="card card-inverse card-primary mb-3 ' + el.category_id + '">'+
                                       '<div class="card-block">'+
@@ -12732,7 +12732,7 @@ $(document).ready(function() {
                                       '</div>'+
                                     '</div>');
                                 })
-                          }
+                            }
 
                            })
                          .fail(function(response) {
